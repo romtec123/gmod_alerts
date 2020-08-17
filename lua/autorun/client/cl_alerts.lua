@@ -41,8 +41,6 @@ concommand.Add("alert_help", function(ply, cmd, args)
 end)
 
 concommand.Add("closealerts", function(ply, cmd)
-	if not ply:IsSuperAdmin() then return end
 	ply:PrintMessage(HUD_PRINTCONSOLE, "Closing active alerts.\n")
-	print(ply:Nick() .. " Closed all active alerts.")
 	alertCloseGUI()
 end)
