@@ -1,8 +1,7 @@
-
 net.Receive("sendPlyAlert", function()
 	local time = net.ReadInt(10)
 	local msg = net.ReadString()
-	surface.PlaySound("buttons/button2.wav")
+	surface.PlaySound("ambient/alarms/klaxon1.wav")
 	alertOpenGUI(time, msg)
 end)
 
@@ -17,8 +16,11 @@ function alertOpenGUI(time, msg)
 
 			local midx = (ScrW()/2)
 			local midy = (ScrH()/2)
+			
 			surface.DrawRect( 0, midy-50, ScrW(), 100 )
-			draw.SimpleText(msg, "DermaLarge", midx, midy, whit, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+			draw.SimpleText(msg, "DermaLarge", midx, midy+20, whit, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+			draw.SimpleText("Alert:", "DermaLarge", midx, midy-20, whit, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+			--if anyone knows a good way to automatically center text with draw.WordBox please let me know!
 		end
 	end)
 end
