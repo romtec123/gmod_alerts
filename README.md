@@ -10,7 +10,7 @@ Time is in seconds.
 - lua_run sendAlert([time], "Message") - Run this if you want to send alerts from the server side console.
 
 # Contributing
-I know my code is bad, so instead of talking shit how about you contribute. Submit a pull request!
+I know my code is bad, im still learning! If you see something wrong or want to contribute, submit a pull request!
 
 # Support
 Contact me on discord: romtec#6969
